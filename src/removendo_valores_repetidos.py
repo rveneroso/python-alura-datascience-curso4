@@ -16,4 +16,6 @@ tipos_de_imoveis = pd.DataFrame(tipos_de_imoveis) # <class 'pandas.core.frame.Da
 # duplicidades. Para refazer esses índices tornando-os sequenciais:
 tipos_de_imoveis.index = range(tipos_de_imoveis.shape[0])
 tipos_de_imoveis.columns.name = 'Id'
+# Ordenando o DataFrame pelo tipo de imóvel
+tipos_de_imoveis.sort_values('Tipo', inplace=True)
 print(tipos_de_imoveis)
